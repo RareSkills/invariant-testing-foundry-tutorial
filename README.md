@@ -16,9 +16,10 @@ Clone this repository
 git clone https://github.com/RareSkills/invariant-testing-foundry-tutorial.git
 ```
 
-Run the tests with
+Initialize and run the tests with
 
 ```
 cd invariant-testing-foundry-tutorial
+forge install
 forge test -vvv
 ```
