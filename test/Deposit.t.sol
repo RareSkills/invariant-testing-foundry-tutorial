@@ -13,9 +13,9 @@ contract InvariantDeposit is Test {
     }
 
     function invariant_alwaysWithdrawable() external payable {
-        vm.prank(address(0xaa));
         vm.deal(address(0xaa), 10 ether);
-
+        vm.startPrank(address(0xaa));
+        
         deposit.deposit{value: 1 ether}();
         uint256 balanceBefore = deposit.balance(address(0xaa));
         vm.stopPrank();
